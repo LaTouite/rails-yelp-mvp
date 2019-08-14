@@ -1,15 +1,31 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.resto {
-  text-decoration: none;
-  color: #8559a5;
+.index-title {
+  background-color: #464159;
+  color: white;
 }
 
-.resto-div {
-  background-color: #eaeaea;
+.resto {
+  text-decoration: none;
+  color: #464159;
 }
 
 .resto:hover {
   text-decoration: none;
+  color: #464159;
+}
+
+.resto-box {
+  display: flex;
+  justify-content: space-between;
+  background-color: #464159;
+  color: white;
+  border-radius: 4px;
+}
+
+.box {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: space-between;
 }
