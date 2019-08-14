@@ -1,0 +1,14 @@
+<div>
+  <div>
+    <%= simple_form_for @restaurant do |f| %>
+      <%= f.input :name %>
+      <%= f.input :address %>
+      <%= f.input :phone_number %>
+      <%= f.input :category, collection: Restaurant::CATEGORIES %>
+      <%= f.submit class: 'btn btn-primary'%>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to 'Nos Restaurants', restaurants_path %>
+  </div>
+</div>

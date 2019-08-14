@@ -1,0 +1,15 @@
+// Place all the styles related to the restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.resto {
+  text-decoration: none;
+  color: #8559a5;
+}
+
+.resto-div {
+  background-color: #eaeaea;
+}
+
+.resto:hover {
+  text-decoration: none;
+}

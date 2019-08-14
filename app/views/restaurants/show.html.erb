@@ -1,0 +1,37 @@
+<div class="container">
+  <div>
+    <%= @restaurant.name %>
+  </div>
+  <div>
+    <span>Category: </span><%= @restaurant.category %>
+  </div>
+  <div>
+    <%= @restaurant.address %>
+  </div>
+  <div>
+    <%= @restaurant.phone_number %>
+  </div>
+  <div class='p-3 bg-warning'>
+    <h3>Les avis</h3>
+    <% @restaurant.reviews.each do |review| %>
+      <%= review.content %>
+      <h6>Rating: <%= review.rating %></h6>
+    <% end %>
+  </div>
+  <div class='box'>
+    <div>
+      <%= link_to 'Ajoutez un avis', new_restaurant_review_path(@restaurant) %>
+    </div>
+    <div>
+      <%= link_to 'edit', edit_restaurant_path(@restaurant), class: 'btn btn-primary'%>
+    </div>
+    <div>
+      <%= link_to 'Supprimer', restaurant_path(@restaurant),
+      method: :delete,
+      data: { confirm: "Are you sure?" }, class: 'btn btn-danger'%>
+    </div>
+    <div>
+      <%= link_to 'Nos Restaurants', restaurants_path %>
+    </div>
+  </div>
+</div>

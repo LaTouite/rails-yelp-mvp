@@ -1,0 +1,19 @@
+<div class='container pt-3'>
+  <h1 class='bg-primary rounded p-3'>Nos restaurants</h1>
+
+  <% @restaurants.each do |restaurant| %>
+    <div class='mt-2 rounded pt-2 pb-2 resto-div'>
+      <%= link_to restaurant.name, restaurant_path(restaurant), class: 'resto' %>
+      <div>
+        <%= link_to 'Edit', edit_restaurant_path(restaurant), class: 'btn btn-warning'%>
+        <%= link_to 'Supprimer', restaurant_path(restaurant),
+        method: :delete,
+        data: { confirm: "Are you sure?" }, class: 'btn btn-danger'%>
+      </div>
+    </div>
+  <% end %>
+
+  <div class='pt-3'>
+    <%= link_to 'Ajouter un restaurant', new_restaurant_path, class: 'btn btn-success' %>
+  </div>
+</div>
